@@ -20,10 +20,10 @@ collections:
         name: "credits"
         widget: "object"
         fields: 
-          - {label: "digital technician", name: "digital technician", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
-          - {label: "graphics", name: "graphics", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
-          - {label: "hair assistance", name: "hair assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
-          - {label: "styling assistance", name: "styling assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
+          - {label: "digital technician", name: "digital technician", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
+          - {label: "graphics", name: "graphics", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
+          - {label: "hair assistance", name: "hair assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
+          - {label: "styling assistance", name: "styling assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
           - {label: "photography assistance", name: "photography assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
 
   - name: "blog"
