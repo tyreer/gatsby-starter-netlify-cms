@@ -7,8 +7,8 @@ public_folder: /img
 
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "iD"
+    label: "iD Post"
     folder: "src/test/"
     extension: json
     create: true
