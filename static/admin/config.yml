@@ -7,10 +7,25 @@ public_folder: /img
 
 
 collections:
+   - name: "blog"
+    label: "Blog"
+    folder: "src/test/"
+    extension: json
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "File name", name: "filename", widget: "string"}
+      - {label: "Credits", name: "credits", widget: "object", fields: 
+          - {label: "digital technician", name: "digital technician", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
+          - {label: "graphics", name: "graphics", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
+          - {label: "hair assistance", name: "hair assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
+          - {label: "styling assistance", name: "styling assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}},
+          - {label: "photography assistance", name: "photography assistance", widget: "list", field: {label: "Name", name: "name", widget: "string"}}
+
   - name: "blog"
     label: "Blog"
-    folder: "src/test/blog"
-    extension: json
+    folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -25,9 +40,8 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    extension: json
     files:
-      - file: "src/test/index"
+      - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
         fields:
@@ -40,14 +54,14 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - file: "src/test/about/index"
+      - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/test/products/index"
+      - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
