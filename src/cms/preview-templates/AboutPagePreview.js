@@ -5,6 +5,8 @@ import { AboutPageTemplate } from '../../templates/about-page'
 const AboutPagePreview = ({ entry, widgetFor }) => (
   <>
   <h1>{`YOYOYO ${process.env.REACT_APP_YO}`}</h1>
+  <h1>{`YOYOYO ${process.env.NODE_ENV}`}</h1>
+  <h1>{`YOYOYO ${process.env.REPOSITORY_URL}`}</h1>
   <AboutPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
